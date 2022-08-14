@@ -1,0 +1,4 @@
+tasks:
+  - init: yarn install && yarn run build && yarn run build:css && bin/setup
+image:
+  file: .gitpod.dockerfile
