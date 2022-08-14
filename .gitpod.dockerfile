@@ -1,3 +1,3 @@
-FROM gitpod/workspace-postgresql
-
 FROM gitpod/workspace-full
+
+RUN brew install postgresql
