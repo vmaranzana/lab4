@@ -1,5 +1,5 @@
 tasks:
-  - init: brew install postgresql && yarn install && yarn run build && yarn run build:css
+  - init: yarn install && yarn run build && yarn run build:css
     command: bin/setup
 ports:
   - port: 3000
