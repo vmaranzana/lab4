@@ -1,5 +1,8 @@
 tasks:
-  - init: yarn install && yarn run build && yarn run build:css && bin/setup
-    command: brew services start postgresql
-image:
-  file: .gitpod.dockerfile
+  - init: brew install postgresql && yarn install && yarn run build && yarn run build:css
+    command: brew services start postgresql && bin/setup
+ports:
+  - port: 3000
+    onOpen: open-preview
+  - port: 5432
+    onOpen: ignore
