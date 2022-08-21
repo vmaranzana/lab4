@@ -6,9 +6,12 @@ Familiarizarse con las vistas en rails.
 
 ## Notas
 
-- Se debe usar el workspace del lab1
 - Si la DB está con datos no deseados pueden resetearla con `rails db:reset`
 - La aplicación ya tiene bootstrap instalado
+
+## Pasos previos
+
+Ver la sección [preparar repositorio](https://github.com/I110IS/lab1/blob/master/README.md#preparar-repositorio)
 
 ## Práctica
 
