@@ -11,9 +11,16 @@
   </head>
 
   <body>
-    <%= render "application/header" %>
-    <div class="container pt-4">
-      <%= yield %>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <%= render "application/left_sidebar" %>
+        </div>
+        <div class="col-sm-5 border border-top-0">
+          <%= yield %>
+        </div>
+        <div class="col-sm-4"></div>
+      </div>
     </div>
   </body>
 </html>

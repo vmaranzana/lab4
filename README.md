@@ -1,13 +1,12 @@
-# LAB3
+# LAB4
 
 ## Objetivos
 
-Familiarizarse con las vistas en rails.
+Familiarizarse con las rutas y controladores.
 
 ## Notas
 
-- Si la DB está con datos no deseados pueden resetearla con `rails db:reset`
-- La aplicación ya tiene bootstrap instalado
+- Este laboratorio está basado en el LAB3 (pueden reusar el workspace del LAB3)
 
 ## Pasos previos
 
@@ -15,12 +14,21 @@ Ver la sección [preparar repositorio](https://github.com/I110IS/lab1/blob/maste
 
 ## Práctica
 
-1. Actualizar el archivo `app/views/monsters/show.html.erb` para que muestre el nombre como título y la descripción como párrafo. El monstruo está disponible en la variable `@monster`. Usar los tags de HTML correspondientes.
-1. Actualizar el archivo `app/views/monsters/index.html.erb` para que muestre un listado o una tabla de todos los monstruos. Los monstruos están disponibles en la variable `@monsters`.
-1. Actualizar el listado de monstruos del punto previo para que se pueda hacer click sobre el nombre del monstruo y se redirija a la página del monstruo (el template show del punto 1)
-1. Actualizar el listado de monstruos para que muestre "**Twitero Destacado**" en color rojo junto a los monstruos que tengan más de 1 tweet.
-    1. Usar el atributo style
-    1. Usar el archivo de estilos (`app/assets/stylesheets/application.bootstrap.scss`)
-1. Actualizar la vista de un monstruo para que incluya un botón para eliminar al monstruo. El botón debe ser de color rojo.
-1. Actualizar la vista de un monstruo para que muestre los tweets del monstruo. Se deben mostrar la información en dos columnas, la primera columna muestra la información del monstruo y el botón para borrar, la segunda columna debe mostrar el listado de tweets del monstruo.
-1. Agregar un pie de página a todas las páginas del sitio. El pie de página debe incluir el siguiente texto: "Copyright © 2022".
+1. Copiar `app/views/monsters/index.html.erb` y `app/views monsters/show.html.erb` del laboratorio 3 (Vistas).
+    1. Copiar también el archivo de estilos si es necesario.
+1. Crear las rutas para los tweets
+1. Crear el controlador para los tweets y crear una acción para el index:
+    1. Se debe obtener todos los tweets de la base de datos y guardarlos en `@tweets`
+    1. Deben estar ordenados por fecha de creación
+    1. El template para tweets#index está prearmado
+1. Actualizar las rutas para que la ruta raíz sirva la lista de tweets (tweets#index)
+1. Crear la acción show para los tweets:
+    1. Se debe mostrar la información detallada de un solo tweet
+    1. El template para tweets#show está prearmado
+1. Crear la acción para crear tweets:
+    1. Debe usar los parametros recibidos
+    1. Asegurarse de usar require y permit
+    1. Debe redirigr al show del nuevo tweet
+    1. El template para tweets#new está prearmado
+1. Al visitar la vista de un monstruo, redirigir a la vista de crear tweets si el monstruo no tiene tweets
+1. Excluir las rutas asociadas a la edición de tweets porque no se usarán
