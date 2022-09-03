@@ -4,10 +4,6 @@
 
 Familiarizarse con las rutas y controladores.
 
-## Notas
-
-- Este laboratorio está basado en el LAB3 (pueden reusar el workspace del LAB3)
-
 ## Pasos previos
 
 Ver la sección [preparar repositorio](https://github.com/I110IS/lab1/blob/master/README.md#preparar-repositorio)
