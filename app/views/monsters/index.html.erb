@@ -1,1 +1,17 @@
-<%# Update me %><%= @monsters.inspect %>
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1> Lista monstruos </h1>
+    <% @monsters.each do |m| %> 
+        
+        <%= link_to m.name, monster_path(m.id) %>
+        <% cant = m.tweets.count %>
+        <% if cant > 1 %> 
+            <h9 style="color:red;"> Twittero destacado </h9>      
+        <% end %>
+        <br>
+    <% end %>
+
+</body>
+</html>
